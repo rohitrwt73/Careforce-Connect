@@ -21,17 +21,17 @@ const NavBar = () => {
           Fetch New Schemes
         </Link>
         <Link
-          href="/flw/insertNewScheme"
+          href="/admin/insertNewScheme"
           className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
           Insert New Scheme
         </Link>
         <Link
-          href="/flw/seeCSUM"
+          href="/admin/seeCSUM"
           className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
           See Current user and Scheme Mappings
         </Link>
         <Link
-          href="/flw/viewFLW"
+          href="/admin/viewFLW"
           className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
           View FLW
         </Link>
