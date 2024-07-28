@@ -1,43 +1,43 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const NavBar = () => {
+const AdminNavBar = () => {
   return (
-    <div className="flex justify-between items-center p-4 bg-gray-100">
+    <div className="flex justify-between items-center p-4 bg-[#002549]">
       <div className="flex items-center">
         <Link href="/admin">
           <Image
             src="https://www.indusaction.org/wp-content/themes/indusaction/img/logo.svg"
             alt="Indus Action Logo"
-            width={197} // Adjust width as needed
-            height={40} // Adjust height as needed
+            width={197}
+            height={40}
           />
         </Link>
       </div>
       <div className="flex justify-center items-center gap-5">
-        <Link
-          href="/admin/fetchNewScheme"
-          className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
-          Fetch New Schemes
+        <Link href="/admin/fetchNewScheme">
+          <button className="rounded-md text-white font-extrabold bg-blue-500 hover:bg-gray-200 hover:text-blue-800 transition-all duration-300 text-base p-2">
+            Fetch New Schemes
+          </button>
         </Link>
-        <Link
-          href="/admin/insertNewScheme"
-          className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
-          Insert New Scheme
+        <Link href="/admin/insertNewScheme">
+          <button className="rounded-md text-white font-extrabold bg-blue-500 p-2 transition-colors duration-300 hover:bg-gray-200 hover:text-blue-800">
+            Insert New Scheme
+          </button>
         </Link>
-        <Link
-          href="/admin/seeCSUM"
-          className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
-          See Current user and Scheme Mappings
+        <Link href="/admin/seeCSUM">
+          <button className="rounded-md font-extrabold bg-blue-500 text-white hover:bg-gray-200 hover:text-blue-800 text-base p-2 transition-colors duration-300">
+            See Current user and Scheme Mappings
+          </button>
         </Link>
-        <Link
-          href="/admin/viewFLW"
-          className="text-blue-700 text-base p-2 transition-colors duration-300 hover:text-blue-500">
-          View FLW
+        <Link href="/admin/viewFLW">
+          <button className="rounded-md text-white font-extrabold bg-blue-500 hover:text-blue-600 hover:bg-gray-200 text-base p-2 transition-colors duration-300">
+            View FLW
+          </button>
         </Link>
       </div>
     </div>
   );
 };
 
-export default NavBar;
+export default AdminNavBar;
