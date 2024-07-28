@@ -8,7 +8,7 @@ export default async function handler(req, res) {
       res.status(405).json({"message":"METHOD_NOT_ALLWED"}) // Method Not Allowed
   }
 
-  const { uid, password, name, dob, gender, phone, email, aadhar } = req.body;
+  const { uid, password, name, dob, gender, phone, email, aadhaar } = req.body;
 
   try {
     const passwordHash = bcrypt.hashSync(password, 10)
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       gender,
       phone,
       email,
-      aadhar,
+      aadhaar,
       verified: false,
       createdAt: new Date(),
     });
