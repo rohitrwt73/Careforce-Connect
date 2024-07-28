@@ -53,8 +53,8 @@ const Login = () => {
 
   return (
     <>
-    <Navbar />
-      <section className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800 font-poppins">
+      <Navbar />
+      <section className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 text-gray-800 font-poppins">
         <ToastContainer />
         <div className="w-full max-w-md mx-4 p-8 bg-white rounded-lg shadow-lg transform transition-all hover:scale-105">
           <div className="flex justify-between mb-6">
@@ -62,7 +62,7 @@ const Login = () => {
               className={`py-2 px-4 rounded ${isLogin ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}
               onClick={() => setIsLogin(true)}
             >
-              FWL Login
+              FLW Login
             </button>
             <button
               className={`py-2 px-4 rounded ${!isLogin ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}

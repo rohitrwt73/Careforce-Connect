@@ -4,7 +4,7 @@ import { FaUserCheck, FaClipboardList, FaRegFileAlt, FaQuestionCircle, FaExclama
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-100 to-blue-100 text-gray-800 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 text-gray-800 flex flex-col items-center">
       <Navbar />
       <main className="w-full mt-8 max-w-4xl px-4 py-8 md:px-8 lg:px-16 bg-white shadow-2xl rounded-2xl transform transition-transform hover:scale-105">
         <h1 className="text-5xl font-extrabold text-center text-blue-700 mb-6 transition-transform transform hover:scale-110">

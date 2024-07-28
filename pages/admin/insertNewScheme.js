@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '@/firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import AdminNavBar from '@/components/NavAdmin';
 
 const SchemeForm = () => {
     const [formData, setFormData] = useState({
@@ -65,6 +66,8 @@ const SchemeForm = () => {
     };
 
     return (
+        <>
+        <AdminNavBar />
         <div className="w-full bg-gradient-to-r from-blue-100 to-purple-200 flex items-center justify-center min-h-screen">
             <div className="mt-5 bg-white p-8 rounded-lg shadow-2xl w-full max-w-5xl">
                 <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Scheme Information Form</h2>
@@ -204,6 +207,7 @@ const SchemeForm = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

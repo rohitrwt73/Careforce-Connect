@@ -58,7 +58,7 @@ const RegisterAadhaar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 flex items-center justify-center">
       <ToastContainer />
       <div className="bg-white p-8 rounded-lg w-full max-w-md text-center shadow-lg transform transition-all hover:scale-105">
         <h1 className="text-2xl font-bold mb-6 text-center text-blue-700">

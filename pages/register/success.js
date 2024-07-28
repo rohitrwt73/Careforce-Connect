@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const RegistrationSuccess = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg w-full max-w-md text-center shadow-lg transform transition-all hover:scale-105">
         <h1 className="text-3xl font-bold mb-4 text-blue-700">
           Registration Successful!

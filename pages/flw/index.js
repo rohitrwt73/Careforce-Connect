@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <>
       <NavBar />
-      <div className='flex flex-col items-center justify-center min-h-[90vh] bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300'>
+      <div className='flex flex-col items-center justify-center min-h-[90vh] bg-gradient-to-r from-blue-100 to-purple-200'>
         <div className="grid grid-cols-2 gap-6">
           <Link href='/flw/allSchemes'>
             <div className="max-w-sm rounded overflow-hidden shadow-lg bg-blue-600 p-6 text-white hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">

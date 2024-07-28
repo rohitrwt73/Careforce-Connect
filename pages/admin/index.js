@@ -8,7 +8,7 @@ const Page = () => {
       <NavBar />
       <div className='bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 flex flex-col items-center justify-center min-h-[90vh]'>
         <div className="grid grid-cols-2 gap-6">
-          <Link href='/admin/fetchNewSchemes'>
+          <Link href='/admin/fetchNewScheme'>
             <div className="max-w-sm rounded overflow-hidden shadow-lg bg-teal-600 p-6 text-white hover:bg-teal-700 transition-colors duration-300 transform hover:scale-105">
               <div className="font-bold text-xl mb-2">Fetch New Schemes</div>
               <p className="text-base">
