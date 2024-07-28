@@ -7,7 +7,7 @@ const Page = () => {
     <NavBar/>
     <div className='flex flex-col items-center justify-center min-h-[90vh] bg-gray-800'>
     <div className="grid grid-cols-2 gap-2 p-4">
-        <Link href='/admin/fetchNewSchemes'>
+        <Link href='/admin/fetchNewScheme'>
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-teal-600 p-6 text-white">
         <div className="font-bold text-xl mb-2">Fetch New Schemes</div>
         <p className="text-base">

@@ -108,7 +108,9 @@ const UserFormAndEligibleSchemes = () => {
                             <ul>
                                 {eligibleSchemes.map(scheme => (
                                     <li key={scheme.id} className="mb-2">
-                                        <strong>{scheme.SchemeName}</strong>: <Link href={`/flw/allSchemes/${scheme.id}`} className='text-blue-500'>Visit Link</Link>
+                                        <strong>{scheme.SchemeName}</strong>
+                                        <Link href={`/flw/allSchemes/${scheme.id}`} className='bg-blue-500 text-white font-bold p-2 mx-2'>More Details</Link>
+                                        <Link href={`/flw/apply/${selectedUserId}/${scheme.SchemeName}/${scheme.id}`} className='bg-blue-500 text-white font-bold p-2 mx-2'>Apply Now</Link>
                                     </li>
                                 ))}
                             </ul>

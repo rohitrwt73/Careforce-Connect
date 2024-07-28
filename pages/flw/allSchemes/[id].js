@@ -44,52 +44,52 @@ const SchemeDetails = () => {
   return (
     <>
       <NavBar />
-      <div className="bg-[#0b1121] min-h-screen p-8">
-        <div className="bg-[#2a2b38] max-w-4xl mx-auto p-8 rounded-lg shadow-lg text-white">
+      <div className="bg-gray-100 min-h-screen p-8">
+        <div className="bg-white max-w-4xl mx-auto p-8 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold mb-6 text-center">{scheme.SchemeName}</h1>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-[#2a2b38] text-white border border-gray-700">
+            <table className="min-w-full bg-white text-black border border-gray-300">
               <thead>
                 <tr>
-                  <th className="py-3 px-6 text-left bg-gray-700">Field</th>
-                  <th className="py-3 px-6 text-left bg-gray-700">Details</th>
+                  <th className="py-3 px-6 text-left bg-gray-200">Field</th>
+                  <th className="py-3 px-6 text-left bg-gray-200">Details</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Gender</td>
                   <td className="py-4 px-6">{scheme.EligibleGender}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Age</td>
                   <td className="py-4 px-6">{scheme.AgeRange.min} to {scheme.AgeRange.max}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Is Minority Only Eligible</td>
-                  <td className="py-4 px-6">{scheme.Minority===true ? "True" : "False"}</td>
+                  <td className="py-4 px-6">{scheme.Minority === true ? "True" : "False"}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Only for BPL</td>
-                  <td className="py-4 px-6">{scheme.BPL?"True":"False"}</td>
+                  <td className="py-4 px-6">{scheme.BPL ? "True" : "False"}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Details</td>
                   <td className="py-4 px-6">{scheme.Description}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Income Limit</td>
                   <td className="py-4 px-6">{scheme.IncomeLimit}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Documents</td>
                   <td className="py-4 px-6">{scheme.RequiredDocs.join(', ')}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
+                <tr className="border-b border-gray-300">
                   <td className="py-4 px-6 font-semibold">Only for Differently Abled</td>
-                  <td className="py-4 px-6">{scheme.DifferentlyAbled?"True":"False"}</td>
+                  <td className="py-4 px-6">{scheme.DifferentlyAbled ? "True" : "False"}</td>
                 </tr>
-                <tr className="border-b border-gray-600">
-                  <td className="py-4 px-6 font-semibold">Caste Eligibility </td>
+                <tr className="border-b border-gray-300">
+                  <td className="py-4 px-6 font-semibold">Caste Eligibility</td>
                   <td className="py-4 px-6">{scheme.Caste}</td>
                 </tr>
               </tbody>
