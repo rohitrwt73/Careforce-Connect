@@ -12,7 +12,7 @@ const RegisterAadhaar = () => {
   useEffect(() => {
     // Extract and set user data from query parameters
     const { uid, password, name, dob, gender, phone, email, aadhaar } = query;
-    setUserData({uid, password, name, dob, gender, phone, email, aadhaar });
+    setUserData({ uid, password, name, dob, gender, phone, email, aadhaar });
   }, [query]);
 
   const handleSubmit = async (event) => {
@@ -37,17 +37,17 @@ const RegisterAadhaar = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(userData),
         });
-  
-        if (response.status!=200) {
+
+        if (response.status != 200) {
           throw new Error('Login failed');
         }
-  
+
         const data = await response.json();
         // Handle successful login, e.g., store token, redirect
         localStorage.setItem("TOKEN", data.token.userId)
         router.push("/flw")
       } catch (error) {
-          toast("There Was Some Error!");
+        toast("There Was Some Error!");
       }
 
       // Redirect to a success or confirmation page
@@ -58,10 +58,10 @@ const RegisterAadhaar = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-      <ToastContainer/>
-      <div className="bg-gray-800 p-8 rounded-lg w-full max-w-md text-white">
-        <h1 className="text-2xl font-bold mb-6 text-center">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center">
+      <ToastContainer />
+      <div className="bg-white p-8 rounded-lg w-full max-w-md text-center shadow-lg transform transition-all hover:scale-105">
+        <h1 className="text-2xl font-bold mb-6 text-center text-blue-700">
           Verify Your Aadhaar
         </h1>
 
@@ -71,7 +71,7 @@ const RegisterAadhaar = () => {
               type="text"
               value={userData.aadhaar}
               readOnly
-              className="w-full p-4 pl-12 border border-transparent rounded-lg bg-gray-700 text-gray-100"
+              className="w-full p-4 pl-12 border border-transparent rounded-lg bg-gray-200 text-gray-900"
             />
           </div>
           <div className="relative">
@@ -81,12 +81,12 @@ const RegisterAadhaar = () => {
               onChange={(e) => setOtp(e.target.value)}
               placeholder="OTP"
               required
-              className="w-full p-4 pl-12 border border-transparent rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full p-4 pl-12 border border-transparent rounded-lg bg-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 mt-6 bg-teal-600 text-gray-100 rounded-lg border border-transparent shadow-lg hover:bg-teal-500 transition-colors duration-300"
+            className="w-full py-2 mt-6 bg-blue-600 text-white rounded-lg border border-transparent shadow-lg hover:bg-blue-500 transition-colors duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
           >
             Verify
           </button>
