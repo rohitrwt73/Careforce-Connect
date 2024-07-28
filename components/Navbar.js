@@ -2,23 +2,27 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 text-gray-100 w-full p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-xl font-bold">
-          <Link href="/" className="text-teal-400 hover:text-teal-300">Indus Action
+    <nav className="z-10 sticky top-0 bg-[#002549] text-white w-full py-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center px-6">
+        <div className="text-2xl font-bold">
+          <Link className="text-white hover:text-blue-300 transition-colors duration-300" href="/" passHref>
+            Indus Action
           </Link>
         </div>
-        <ul className="flex space-x-6">
+        <ul className="flex space-x-8">
           <li>
-            <Link href="/" className="hover:text-teal-300">Home
+            <Link className="text-lg px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 transition-all duration-300" href="/" passHref>
+              Home
             </Link>
           </li>
           <li>
-            <Link href="/register" className="hover:text-teal-300">Join Our Team
+            <Link className="text-lg px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 transition-all duration-300" href="/register" passHref>
+              Join our team
             </Link>
           </li>
           <li>
-            <Link href="/login" className="hover:text-teal-300">Login
+            <Link className="text-lg px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 transition-all duration-300" href="/login" passHref>
+              Login
             </Link>
           </li>
         </ul>

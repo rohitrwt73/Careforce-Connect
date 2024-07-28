@@ -3,6 +3,7 @@ import { db } from '@/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
+import Navbar from '@/components/NavFLW';
 
 const IssueForm = () => {
     const [schemeNames, setSchemeNames] = useState([]);
@@ -46,59 +47,62 @@ const IssueForm = () => {
         }
     }, [selectedScheme]);
 
-    const handleSubmit =(e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault()
         toast("Your Grievance is mailed to the matter expert.")
     }
 
     return (
-        <div className="w-full bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 items-center justify-center py-8 px-4 min-h-screen">
-            <ToastContainer/>
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full">
-                <h2 className="text-3xl font-bold mb-6 text-indigo-600">Issue Reporting Form</h2>
-                <form onSubmit={handleSubmit}>
-                    {/* Scheme Name */}
-                    <div className="mb-4">
-                        <label className="block text-gray-700 font-semibold">Scheme Name</label>
-                        <select required
-                            className="mt-2 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300"
-                            value={selectedScheme}
-                            onChange={(e) => setSelectedScheme(e.target.value)}
-                        >
-                            <option value="" disabled>Select Scheme</option>
-                            {schemeNames.map((scheme, index) => (
-                                <option key={index} value={scheme}>{scheme}</option>
-                            ))}
-                        </select>
-                    </div>
+        <>
+            <Navbar />
+            <div className="w-full bg-gradient-to-r from-blue-100 to-purple-200 items-center justify-center py-8 px-4 min-h-screen">
+                <ToastContainer />
+                <div className="bg-white p-8 rounded-lg shadow-lg w-full">
+                    <h2 className="text-3xl font-bold mb-6 text-indigo-600">Issue Reporting Form</h2>
+                    <form onSubmit={handleSubmit}>
+                        {/* Scheme Name */}
+                        <div className="mb-4">
+                            <label className="block text-gray-700 font-semibold">Scheme Name</label>
+                            <select required
+                                className="mt-2 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300"
+                                value={selectedScheme}
+                                onChange={(e) => setSelectedScheme(e.target.value)}
+                            >
+                                <option value="" disabled>Select Scheme</option>
+                                {schemeNames.map((scheme, index) => (
+                                    <option key={index} value={scheme}>{scheme}</option>
+                                ))}
+                            </select>
+                        </div>
 
-                    {/* Type of Issue */}
-                    <div className="mb-4">
-                        <label className="block text-gray-700 font-semibold">Type of Issue</label>
-                        <select required className="mt-2 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300">
-                            {issueTypes.map((issue, index) => (
-                                <option key={index}>{issue}</option>
-                            ))}
-                        </select>
-                    </div>
+                        {/* Type of Issue */}
+                        <div className="mb-4">
+                            <label className="block text-gray-700 font-semibold">Type of Issue</label>
+                            <select required className="mt-2 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300">
+                                {issueTypes.map((issue, index) => (
+                                    <option key={index}>{issue}</option>
+                                ))}
+                            </select>
+                        </div>
 
-                    {/* Matter Expert */}
-                    <div className="mb-4">
-                        <label className="block text-gray-700 font-semibold">Allotted Matter Expert</label>
-                        <select required className="mt-2 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300">
-                            {experts.map((expert, index) => (
-                                <option key={index} value={expert.email}>
-                                    {expert.name} ({expert.phone})
-                                </option>
-                            ))}
-                        </select>
-                    </div>
+                        {/* Matter Expert */}
+                        <div className="mb-4">
+                            <label className="block text-gray-700 font-semibold">Allotted Matter Expert</label>
+                            <select required className="mt-2 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300">
+                                {experts.map((expert, index) => (
+                                    <option key={index} value={expert.email}>
+                                        {expert.name} ({expert.phone})
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
 
-                    {/* Submit Button */}
-                    <button type="submit" className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75">Submit</button>
-                </form>
+                        {/* Submit Button */}
+                        <button type="submit" className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75">Submit</button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
