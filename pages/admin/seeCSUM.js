@@ -1,7 +1,7 @@
 // pages/applications/index.js
 
 import { useEffect, useState } from 'react';
-import { db } from '@/firebase'; // Adjust the path as needed
+import { db } from '@/firebase'; 
 import { collection, getDocs } from 'firebase/firestore';
 import AdminNavBar from '@/components/NavAdmin';
 
